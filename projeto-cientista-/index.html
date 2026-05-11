@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIOLÃO IA - Seu Coach de Violão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VIOLÃO <span class="ia">IA</span></h1>
+            <p>Seu Coach Inteligente de Violão</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Domine o Violão com IA</h2>
+            <p class="tagline">Afinador • Metrônomo • IA de Ajuda</p>
+            <div class="hero-buttons">
+                <button class="btn primary" onclick="abrirAfinador()">🎸 Afinador</button>
+                <button class="btn secondary" onclick="abrirMetronomo()">⏱️ Metrônomo</button>
+                <button class="btn secondary" onclick="abrirChatIA()">💬 IA de Ajuda</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AFINADOR -->
+    <div id="afinadorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharAfinador()">×</span>
+            <h2>🎸 Afinador de Violão</h2>
+            <p id="status" class="status">Clique em "Ativar Microfone"</p>
+            
+            <div class="tuner-display">
+                <div id="note" class="note">—</div>
+                <div id="frequency" class="frequency">— Hz</div>
+                <div id="deviation" class="deviation">— cent</div>
+            </div>
+
+            <div class="strings">
+                <button class="string-btn" onclick="setTargetNote('E2')">E₂</button>
+                <button class="string-btn" onclick="setTargetNote('A2')">A₂</button>
+                <button class="string-btn" onclick="setTargetNote('D3')">D₃</button>
+                <button class="string-btn" onclick="setTargetNote('G3')">G₃</button>
+                <button class="string-btn" onclick="setTargetNote('B3')">B₃</button>
+                <button class="string-btn" onclick="setTargetNote('E4')">E₄</button>
+            </div>
+
+            <button id="startBtn" class="btn primary" onclick="toggleTuner()">Ativar Microfone</button>
+        </div>
+    </div>
+
+    <!-- METRÔNOMO -->
+    <div id="metronomoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharMetronomo()">×</span>
+            <h2>⏱️ Metrônomo</h2>
+            
+            <div class="metronomo-display">
+                <div id="bpmDisplay" class="bpm">120</div>
+                <input type="range" id="bpmSlider" min="40" max="200" value="120" oninput="updateBPM()">
+            </div>
+
+            <div class="bpm-controls">
+                <button onclick="changeBPM(-5)">-5</button>
+                <button onclick="changeBPM(-1)">-1</button>
+                <button onclick="changeBPM(1)">+1</button>
+                <button onclick="changeBPM(5)">+5</button>
+            </div>
+
+            <button id="metronomoBtn" class="btn primary" onclick="toggleMetronomo()">▶ Iniciar Metrônomo</button>
+        </div>
+    </div>
+
+    <!-- CHAT IA -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content chat-modal">
+            <span class="close" onclick="fecharChat()">×</span>
+            <h2>💬 IA de Ajuda</h2>
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Ex: Como faço o acorde de Fá?">
+                <button onclick="enviarMensagem()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>VIOLÃO IA © 2026 • Seu coach completo de violão</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIOLÃO IA - Seu Coach de Violão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VIOLÃO <span class="ia">IA</span></h1>
+            <p>Seu Coach Inteligente de Violão</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>Domine o Violão com IA</h2>
+            <p class="tagline">Afinador • Metrônomo • IA de Ajuda</p>
+            <div class="hero-buttons">
+                <button class="btn primary" onclick="abrirAfinador()">🎸 Afinador</button>
+                <button class="btn secondary" onclick="abrirMetronomo()">⏱️ Metrônomo</button>
+                <button class="btn secondary" onclick="abrirChatIA()">💬 IA de Ajuda</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais (Afinador, Metrônomo, Chat) permanecem iguais -->
+
+    <footer>
+        <div class="container">
+            <p>VIOLÃO IA © 2026 • Seu coach completo de violão</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
