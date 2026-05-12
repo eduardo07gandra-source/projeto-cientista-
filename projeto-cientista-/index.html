@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyAI - Cifras, Aulas e Análise com IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Melody<span class="ai">AI</span></h1>
+            </div>
+            <nav>
+                <a href="#" onclick="abrirAfinador()">Afinador</a>
+                <a href="#" onclick="abrirMetronomo()">Metrônomo</a>
+                <a href="#" onclick="abrirChatIA()">IA de Ajuda</a>
+                <a href="#" onclick="fazerAnaliseDemo()" class="highlight">Análise de Ensaio</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Aprenda, Toque e Melhore com IA</h1>
+            <p class="subtitle">Cifras • Afinador • Metrônomo • Análise Inteligente de Ensaios</p>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Busque músicas, artistas ou cifras...">
+                <button onclick="buscarMusica()">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categorias">
+        <div class="container">
+            <h2>Funcionalidades</h2>
+            <div class="grid">
+                <div class="card" onclick="abrirAfinador()">
+                    <h3>🎸 Afinador</h3>
+                    <p>Precisão profissional em tempo real</p>
+                </div>
+                <div class="card" onclick="abrirMetronomo()">
+                    <h3>⏱️ Metrônomo</h3>
+                    <p>Pratique no tempo certo</p>
+                </div>
+                <div class="card" onclick="abrirChatIA()">
+                    <h3>💬 IA de Ajuda</h3>
+                    <p>Tire dúvidas instantaneamente</p>
+                </div>
+                <div class="card" onclick="fazerAnaliseDemo()">
+                    <h3>📊 Análise IA</h3>
+                    <p>Feedback inteligente dos seus ensaios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modais -->
+    <div id="afinadorModal" class="modal"></div>
+    <div id="metronomoModal" class="modal"></div>
+    <div id="chatModal" class="modal"></div>
+    <div id="analiseModal" class="modal"> </div>
+
+    <footer>
+        <div class="container">
+            <p>MelodyAI © 2026 • Inspirado no Cifra Club</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
